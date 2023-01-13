@@ -1,0 +1,8 @@
+$radius: 41px;
+.btn {
+  height: 64px;
+  width: 222px;
+  &.btn-rounded {
+    border-radius: $radius;
+  }
+}

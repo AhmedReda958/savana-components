@@ -1,0 +1,10 @@
+@use "./variables" as *;
+
+@use "~bootstrap/scss/bootstrap" with (
+  $theme-colors: (
+    "primary": $main-color,
+    "secondary": $alt-color,
+    "dark": $main-bg-color,
+    "light": $alt-bg-color,
+  )
+);
