@@ -1,4 +1,3 @@
-import Button from "./components/Button";
 import PricingCard from "./components/PricingCard";
 import "./style/App.scss";
 
