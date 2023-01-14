@@ -1,0 +1,79 @@
+@use "../../style/variables" as *;
+
+.pricing-card {
+  height: 600px;
+  max-width: 400px;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  background-color: $alt-bg-color;
+  position: relative;
+
+  .head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    h3 {
+      font-weight: bold;
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+    span {
+      color: $main-color;
+    }
+  }
+  .features-list {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 58%;
+    left: 2rem;
+    transform: translateY(-50%);
+    li {
+      padding: 8px 0;
+      .icon {
+        padding-right: 3px;
+        .check {
+          color: #198754;
+        }
+        .times {
+          color: #dc3545;
+        }
+      }
+    }
+  }
+
+  > button {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.main-card {
+    background-color: $main-bg-color;
+    color: white;
+    overflow: hidden;
+    .head span {
+      color: $alt-color;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 50%;
+      top: -60%;
+      left: -80%;
+      transition: 0.3s ease-in-out;
+    }
+    &:hover {
+      &::before {
+        width: 200%;
+        top: -20%;
+        left: 50%;
+        transform: translatex(-50%);
+      }
+    }
+  }
+}

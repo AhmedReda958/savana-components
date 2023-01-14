@@ -1,9 +1,8 @@
 @import "./custom";
 
 //temporary style
-.App {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
 }
